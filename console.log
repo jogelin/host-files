@@ -1,0 +1,1164 @@
+06:52:25.834 [go] Job Started: 2017-03-03 06:52:25 UTC
+
+06:52:25.834 [go] Start to prepare viper-shared-js/0.1.0-43/publish/1/js-publish on ip-*** [/var/lib/go-agent]
+06:52:25.858 [go] Start to update materials.
+
+06:52:25.859 [go] Start updating files at revision 55473f925af1addacf8465b9a11c40eb9b180627 from http://***.net/viper/shared-js.git
+06:52:26.062 [GIT] Fetching changes
+06:52:26.478 [GIT] Performing git gc
+06:52:26.579 [GIT] Reset working directory pipelines/viper-shared-js
+06:52:26.579 [GIT] Cleaning all unversioned files in working copy
+06:52:26.784 [GIT] Cleaning submodule configurations in .git/config
+06:52:26.886 [GIT] Updating working copy to revision 55473f925af1addacf8465b9a11c40eb9b180627
+06:52:26.893 HEAD is now at 55473f9 try again lerna
+06:52:26.893 [GIT] Removing modified files in submodules
+06:52:26.913 [GIT] Cleaning all unversioned files in working copy
+06:52:27.117 [go] Done.
+
+06:52:27.117 [go] setting environment variable 'GO_ENVIRONMENT_NAME' to value 'VIPER'
+06:52:27.117 [go] setting environment variable 'GO_SERVER_URL' to value 'https://***:8154/go'
+06:52:27.117 [go] setting environment variable 'GO_TRIGGER_USER' to value 'changes'
+06:52:27.117 [go] setting environment variable 'GO_PIPELINE_NAME' to value 'viper-shared-js'
+06:52:27.117 [go] setting environment variable 'GO_PIPELINE_COUNTER' to value '43'
+06:52:27.117 [go] setting environment variable 'GO_PIPELINE_LABEL' to value '0.1.0-43'
+06:52:27.117 [go] setting environment variable 'GO_STAGE_NAME' to value 'publish'
+06:52:27.117 [go] setting environment variable 'GO_STAGE_COUNTER' to value '1'
+06:52:27.117 [go] setting environment variable 'GO_JOB_NAME' to value 'js-publish'
+06:52:27.117 [go] setting environment variable 'GO_REVISION' to value '55473f925af1addacf8465b9a11c40eb9b180627'
+06:52:27.117 [go] setting environment variable 'GO_TO_REVISION' to value '55473f925af1addacf8465b9a11c40eb9b180627'
+06:52:27.117 [go] setting environment variable 'GO_FROM_REVISION' to value '55473f925af1addacf8465b9a11c40eb9b180627'
+06:52:27.117 [go] setting environment variable 'NPM_AUTH_TOKEN' to value '********'
+
+06:52:27.161 [go] Start to build viper-shared-js/0.1.0-43/publish/1/js-publish on ip-*** [/var/lib/go-agent]
+06:52:27.161 [go] Current job status: passed.
+
+06:52:27.161 [go] Start to execute task: Plugin with ID: script-executor.
+06:52:27.164 [script-executor] OS detected: 'Linux'. Is Windows? false
+06:52:27.164 [script-executor] Script: 
+ 
+06:52:27.164 [script-executor] -------------------------
+06:52:27.164 moustache gocd.npmrc.mo > .npmrc
+06:52:27.164 [script-executor] -------------------------
+06:52:27.164 [script-executor] Script Type: bash
+06:52:27.171 [script-executor] Script written into '/var/lib/go-agent/pipelines/viper-shared-js/f4562b90-a18a-431a-b68b-70d27ff8967c.sh'.
+06:52:27.193 [go] Current job status: passed.
+
+06:52:27.193 [go] Start to execute task: <fetchartifact pipeline="viper-shared-js" stage="prepare" job="moustache_docker-compose" srcfile="docker-compose-scripts.yml" />.
+06:52:27.193 [go] Fetching artifact [docker-compose-scripts.yml] from [viper-shared-js/0.1.0-43/prepare/latest/moustache_docker-compose]
+06:52:27.316 [go] Saved artifact to [pipelines/viper-shared-js/docker-compose-scripts.yml] after verifying the integrity of its contents.
+06:52:27.317 [go] Current job status: passed.
+
+06:52:27.317 [go] Start to execute task: <fetchartifact pipeline="viper-shared-js" stage="build" job="js-build" srcdir="packages" />.
+06:52:27.317 [go] Fetching artifact [packages] from [viper-shared-js/0.1.0-43/build/latest/js-build]
+06:52:32.740 [go] Saved artifact to [pipelines/viper-shared-js] after verifying the integrity of its contents.
+06:52:32.740 [go] Current job status: passed.
+
+06:52:32.740 [go] Start to execute task: <exec command="docker-compose" >
+<arg>-f</arg>
+<arg>docker-compose-scripts.yml</arg>
+<arg>run</arg>
+<arg>--rm</arg>
+<arg>js-publish</arg>
+</exec>.
+06:52:33.915 Updating certificates in /etc/ssl/certs... 0 added, 0 removed; done.
+06:52:33.918 Running hooks in /etc/ca-certificates/update.d....done.
+06:52:34.166 yarn run v0.20.3
+06:52:34.330 $ npm run _docker:install && lerna publish --yes --skip-git --skip-temp-tag --force-publish --repo-version 0.1.0-43
+06:52:34.548 npm info it worked if it ends with ok
+06:52:34.549 npm info using npm@4.1.2
+06:52:34.549 npm info using node@v7.6.0
+06:52:34.750 npm info lifecycle @viper/parent@0.2.0~pre_docker:install: @viper/parent@0.2.0
+06:52:34.763 npm info lifecycle @viper/parent@0.2.0~_docker:install: @viper/parent@0.2.0
+06:52:34.765 
+06:52:34.765 > @viper/parent@0.2.0 _docker:install /home/app
+06:52:34.766 > yarn install --no-progress && npm run LERNA:HACK
+06:52:34.766 
+06:52:34.988 yarn install v0.20.3
+06:52:35.232 [1/4] Resolving packages...
+06:52:35.480 success Already up-to-date.
+06:52:35.481 Done in 0.50s.
+06:52:35.685 npm info it worked if it ends with ok
+06:52:35.685 npm info using npm@4.1.2
+06:52:35.686 npm info using node@v7.6.0
+06:52:35.876 npm info lifecycle @viper/parent@0.2.0~preLERNA:HACK: @viper/parent@0.2.0
+06:52:35.883 npm info lifecycle @viper/parent@0.2.0~LERNA:HACK: @viper/parent@0.2.0
+06:52:35.885 
+06:52:35.885 > @viper/parent@0.2.0 LERNA:HACK /home/app
+06:52:35.885 > cp ./scripts/GitUtilities.js ./node_modules/lerna/lib/GitUtilities.js
+06:52:35.885 
+06:52:35.892 npm info lifecycle @viper/parent@0.2.0~postLERNA:HACK: @viper/parent@0.2.0
+06:52:35.897 npm info ok 
+06:52:35.901 npm info lifecycle @viper/parent@0.2.0~post_docker:install: @viper/parent@0.2.0
+06:52:35.907 npm info ok 
+06:52:36.236 Lerna v2.0.0-beta.38
+06:52:36.256 Current version: 0.1.0
+06:52:36.256 Checking for updated packages...
+06:52:36.256 No tags found! Comparing with initial commit.
+06:52:36.259 
+06:52:36.259 Changes:
+06:52:36.259 - @viper/forms: 0.1.0 => 0.1.0-43
+06:52:36.259 - @viper/http: 0.1.0 => 0.1.0-43
+06:52:36.259 - @viper/localization: 0.1.0 => 0.1.0-43
+06:52:36.259 
+06:52:36.259 Assuming confirmation.
+06:52:36.262 
+06:52:36.262 Publishing packages to npm...
+06:53:48.515 NpmUtilities.publishTaggedInDir("latest", "./packages/http", )
+06:53:48.516 Error: Command failed: cd /home/app/packages/http && npm publish --tag latest
+06:53:48.516 npm info it worked if it ends with ok
+06:53:48.516 npm info using npm@4.1.2
+06:53:48.516 npm info using node@v7.6.0
+06:53:48.516 npm info lifecycle @viper/http@0.1.0-43~prepublish: @viper/http@0.1.0-43
+06:53:48.516 npm info lifecycle @viper/http@0.1.0-43~prepare: @viper/http@0.1.0-43
+06:53:48.516 npm info lifecycle @viper/http@0.1.0-43~prepublishOnly: @viper/http@0.1.0-43
+06:53:48.516 npm info attempt registry request try #1 at 6:52:37 AM
+06:53:48.516 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:53:48.516 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.516 npm info attempt registry request try #2 at 6:52:48 AM
+06:53:48.516 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:53:48.516 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.516 npm info attempt registry request try #3 at 6:53:48 AM
+06:53:48.516 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:53:48.516 npm ERR! publish Failed PUT undefined
+06:53:48.516 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:53:48.516 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:53:48.516 npm ERR! node v7.6.0
+06:53:48.516 npm ERR! npm  v4.1.2
+06:53:48.516 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:53:48.516 
+06:53:48.516 npm ERR! unable to verify the first certificate
+06:53:48.516 npm ERR! 
+06:53:48.516 npm ERR! If you need help, you may report this error at:
+06:53:48.516 npm ERR!     <https://github.com/npm/npm/issues>
+06:53:48.516 
+06:53:48.516 npm ERR! Please include the following file with any support request:
+06:53:48.517 npm ERR!     /home/app/packages/http/npm-debug.log
+06:53:48.517 
+06:53:48.517     at ChildProcess.exithandler (child_process.js:211:12)
+06:53:48.517     at emitTwo (events.js:106:13)
+06:53:48.517     at ChildProcess.emit (events.js:192:7)
+06:53:48.517     at maybeClose (internal/child_process.js:890:16)
+06:53:48.517     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:53:48.517 Attempting to retry publishing @viper/http...
+06:53:48.517 Error: Command failed: cd /home/app/packages/http && npm publish --tag latest
+06:53:48.517 npm info it worked if it ends with ok
+06:53:48.517 npm info using npm@4.1.2
+06:53:48.517 npm info using node@v7.6.0
+06:53:48.517 npm info lifecycle @viper/http@0.1.0-43~prepublish: @viper/http@0.1.0-43
+06:53:48.518 npm info lifecycle @viper/http@0.1.0-43~prepare: @viper/http@0.1.0-43
+06:53:48.518 npm info lifecycle @viper/http@0.1.0-43~prepublishOnly: @viper/http@0.1.0-43
+06:53:48.518 npm info attempt registry request try #1 at 6:52:37 AM
+06:53:48.518 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:53:48.518 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.518 npm info attempt registry request try #2 at 6:52:48 AM
+06:53:48.518 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:53:48.518 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.518 npm info attempt registry request try #3 at 6:53:48 AM
+06:53:48.518 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:53:48.518 npm ERR! publish Failed PUT undefined
+06:53:48.518 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:53:48.518 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:53:48.518 npm ERR! node v7.6.0
+06:53:48.518 npm ERR! npm  v4.1.2
+06:53:48.518 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:53:48.518 
+06:53:48.518 npm ERR! unable to verify the first certificate
+06:53:48.518 npm ERR! 
+06:53:48.518 npm ERR! If you need help, you may report this error at:
+06:53:48.518 npm ERR!     <https://github.com/npm/npm/issues>
+06:53:48.518 
+06:53:48.518 npm ERR! Please include the following file with any support request:
+06:53:48.518 npm ERR!     /home/app/packages/http/npm-debug.log
+06:53:48.518 
+06:53:48.518     at ChildProcess.exithandler (child_process.js:211:12)
+06:53:48.518     at emitTwo (events.js:106:13)
+06:53:48.518     at ChildProcess.emit (events.js:192:7)
+06:53:48.518     at maybeClose (internal/child_process.js:890:16)
+06:53:48.519     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:53:48.527 NpmUtilities.publishTaggedInDir("latest", "./packages/forms", )
+06:53:48.527 Error: Command failed: cd /home/app/packages/forms && npm publish --tag latest
+06:53:48.527 npm info it worked if it ends with ok
+06:53:48.527 npm info using npm@4.1.2
+06:53:48.527 npm info using node@v7.6.0
+06:53:48.527 npm info lifecycle @viper/forms@0.1.0-43~prepublish: @viper/forms@0.1.0-43
+06:53:48.527 npm info lifecycle @viper/forms@0.1.0-43~prepare: @viper/forms@0.1.0-43
+06:53:48.527 npm info lifecycle @viper/forms@0.1.0-43~prepublishOnly: @viper/forms@0.1.0-43
+06:53:48.528 npm info attempt registry request try #1 at 6:52:38 AM
+06:53:48.528 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:53:48.528 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.528 npm info attempt registry request try #2 at 6:52:48 AM
+06:53:48.528 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:53:48.528 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.528 npm info attempt registry request try #3 at 6:53:48 AM
+06:53:48.528 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:53:48.528 npm ERR! publish Failed PUT undefined
+06:53:48.528 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:53:48.528 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:53:48.528 npm ERR! node v7.6.0
+06:53:48.528 npm ERR! npm  v4.1.2
+06:53:48.528 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:53:48.528 
+06:53:48.528 npm ERR! unable to verify the first certificate
+06:53:48.528 npm ERR! 
+06:53:48.528 npm ERR! If you need help, you may report this error at:
+06:53:48.528 npm ERR!     <https://github.com/npm/npm/issues>
+06:53:48.528 
+06:53:48.528 npm ERR! Please include the following file with any support request:
+06:53:48.528 npm ERR!     /home/app/packages/forms/npm-debug.log
+06:53:48.528 
+06:53:48.528     at ChildProcess.exithandler (child_process.js:211:12)
+06:53:48.528     at emitTwo (events.js:106:13)
+06:53:48.528     at ChildProcess.emit (events.js:192:7)
+06:53:48.528     at maybeClose (internal/child_process.js:890:16)
+06:53:48.528     at Socket.<anonymous> (internal/child_process.js:334:11)
+06:53:48.529     at emitOne (events.js:96:13)
+06:53:48.529     at Socket.emit (events.js:189:7)
+06:53:48.529     at Pipe._handle.close [as _onclose] (net.js:501:12)
+06:53:48.529 Attempting to retry publishing @viper/forms...
+06:53:48.529 Error: Command failed: cd /home/app/packages/forms && npm publish --tag latest
+06:53:48.529 npm info it worked if it ends with ok
+06:53:48.529 npm info using npm@4.1.2
+06:53:48.529 npm info using node@v7.6.0
+06:53:48.529 npm info lifecycle @viper/forms@0.1.0-43~prepublish: @viper/forms@0.1.0-43
+06:53:48.529 npm info lifecycle @viper/forms@0.1.0-43~prepare: @viper/forms@0.1.0-43
+06:53:48.529 npm info lifecycle @viper/forms@0.1.0-43~prepublishOnly: @viper/forms@0.1.0-43
+06:53:48.529 npm info attempt registry request try #1 at 6:52:38 AM
+06:53:48.529 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:53:48.529 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.529 npm info attempt registry request try #2 at 6:52:48 AM
+06:53:48.530 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:53:48.530 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.530 npm info attempt registry request try #3 at 6:53:48 AM
+06:53:48.530 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:53:48.530 npm ERR! publish Failed PUT undefined
+06:53:48.530 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:53:48.530 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:53:48.530 npm ERR! node v7.6.0
+06:53:48.530 npm ERR! npm  v4.1.2
+06:53:48.530 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:53:48.530 
+06:53:48.530 npm ERR! unable to verify the first certificate
+06:53:48.530 npm ERR! 
+06:53:48.530 npm ERR! If you need help, you may report this error at:
+06:53:48.530 npm ERR!     <https://github.com/npm/npm/issues>
+06:53:48.530 
+06:53:48.530 npm ERR! Please include the following file with any support request:
+06:53:48.530 npm ERR!     /home/app/packages/forms/npm-debug.log
+06:53:48.530 
+06:53:48.530     at ChildProcess.exithandler (child_process.js:211:12)
+06:53:48.530     at emitTwo (events.js:106:13)
+06:53:48.530     at ChildProcess.emit (events.js:192:7)
+06:53:48.530     at maybeClose (internal/child_process.js:890:16)
+06:53:48.530     at Socket.<anonymous> (internal/child_process.js:334:11)
+06:53:48.530     at emitOne (events.js:96:13)
+06:53:48.530     at Socket.emit (events.js:189:7)
+06:53:48.530     at Pipe._handle.close [as _onclose] (net.js:501:12)
+06:53:48.551 NpmUtilities.publishTaggedInDir("latest", "./packages/localization", )
+06:53:48.551 Error: Command failed: cd /home/app/packages/localization && npm publish --tag latest
+06:53:48.551 npm info it worked if it ends with ok
+06:53:48.551 npm info using npm@4.1.2
+06:53:48.552 npm info using node@v7.6.0
+06:53:48.552 npm info lifecycle @viper/localization@0.1.0-43~prepublish: @viper/localization@0.1.0-43
+06:53:48.552 npm info lifecycle @viper/localization@0.1.0-43~prepare: @viper/localization@0.1.0-43
+06:53:48.552 npm info lifecycle @viper/localization@0.1.0-43~prepublishOnly: @viper/localization@0.1.0-43
+06:53:48.552 npm info attempt registry request try #1 at 6:52:37 AM
+06:53:48.552 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:53:48.560 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.560 npm info attempt registry request try #2 at 6:52:48 AM
+06:53:48.560 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:53:48.561 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.561 npm info attempt registry request try #3 at 6:53:48 AM
+06:53:48.561 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:53:48.561 npm ERR! publish Failed PUT undefined
+06:53:48.561 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:53:48.561 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:53:48.561 npm ERR! node v7.6.0
+06:53:48.561 npm ERR! npm  v4.1.2
+06:53:48.561 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:53:48.561 
+06:53:48.561 npm ERR! unable to verify the first certificate
+06:53:48.561 npm ERR! 
+06:53:48.561 npm ERR! If you need help, you may report this error at:
+06:53:48.561 npm ERR!     <https://github.com/npm/npm/issues>
+06:53:48.561 
+06:53:48.561 npm ERR! Please include the following file with any support request:
+06:53:48.561 npm ERR!     /home/app/packages/localization/npm-debug.log
+06:53:48.561 
+06:53:48.561     at ChildProcess.exithandler (child_process.js:211:12)
+06:53:48.561     at emitTwo (events.js:106:13)
+06:53:48.561     at ChildProcess.emit (events.js:192:7)
+06:53:48.561     at maybeClose (internal/child_process.js:890:16)
+06:53:48.561     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:53:48.561 Attempting to retry publishing @viper/localization...
+06:53:48.561 Error: Command failed: cd /home/app/packages/localization && npm publish --tag latest
+06:53:48.561 npm info it worked if it ends with ok
+06:53:48.561 npm info using npm@4.1.2
+06:53:48.561 npm info using node@v7.6.0
+06:53:48.561 npm info lifecycle @viper/localization@0.1.0-43~prepublish: @viper/localization@0.1.0-43
+06:53:48.562 npm info lifecycle @viper/localization@0.1.0-43~prepare: @viper/localization@0.1.0-43
+06:53:48.562 npm info lifecycle @viper/localization@0.1.0-43~prepublishOnly: @viper/localization@0.1.0-43
+06:53:48.562 npm info attempt registry request try #1 at 6:52:37 AM
+06:53:48.562 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:53:48.562 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.562 npm info attempt registry request try #2 at 6:52:48 AM
+06:53:48.562 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:53:48.562 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:53:48.562 npm info attempt registry request try #3 at 6:53:48 AM
+06:53:48.562 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:53:48.562 npm ERR! publish Failed PUT undefined
+06:53:48.562 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:53:48.562 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:53:48.562 npm ERR! node v7.6.0
+06:53:48.562 npm ERR! npm  v4.1.2
+06:53:48.562 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:53:48.562 
+06:53:48.562 npm ERR! unable to verify the first certificate
+06:53:48.562 npm ERR! 
+06:53:48.562 npm ERR! If you need help, you may report this error at:
+06:53:48.562 npm ERR!     <https://github.com/npm/npm/issues>
+06:53:48.562 
+06:53:48.562 npm ERR! Please include the following file with any support request:
+06:53:48.562 npm ERR!     /home/app/packages/localization/npm-debug.log
+06:53:48.562 
+06:53:48.562     at ChildProcess.exithandler (child_process.js:211:12)
+06:53:48.562     at emitTwo (events.js:106:13)
+06:53:48.562     at ChildProcess.emit (events.js:192:7)
+06:53:48.562     at maybeClose (internal/child_process.js:890:16)
+06:53:48.562     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:55:00.684 NpmUtilities.publishTaggedInDir("latest", "./packages/http", )
+06:55:00.684 Error: Command failed: cd /home/app/packages/http && npm publish --tag latest
+06:55:00.684 npm info it worked if it ends with ok
+06:55:00.684 npm info using npm@4.1.2
+06:55:00.684 npm info using node@v7.6.0
+06:55:00.684 npm info lifecycle @viper/http@0.1.0-43~prepublish: @viper/http@0.1.0-43
+06:55:00.684 npm info lifecycle @viper/http@0.1.0-43~prepare: @viper/http@0.1.0-43
+06:55:00.684 npm info lifecycle @viper/http@0.1.0-43~prepublishOnly: @viper/http@0.1.0-43
+06:55:00.684 npm info attempt registry request try #1 at 6:53:50 AM
+06:55:00.684 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:55:00.684 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.684 npm info attempt registry request try #2 at 6:54:00 AM
+06:55:00.684 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:55:00.684 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.684 npm info attempt registry request try #3 at 6:55:00 AM
+06:55:00.684 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:55:00.684 npm ERR! publish Failed PUT undefined
+06:55:00.684 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:55:00.684 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:55:00.684 npm ERR! node v7.6.0
+06:55:00.684 npm ERR! npm  v4.1.2
+06:55:00.684 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:55:00.684 
+06:55:00.685 npm ERR! unable to verify the first certificate
+06:55:00.685 npm ERR! 
+06:55:00.685 npm ERR! If you need help, you may report this error at:
+06:55:00.685 npm ERR!     <https://github.com/npm/npm/issues>
+06:55:00.685 
+06:55:00.685 npm ERR! Please include the following file with any support request:
+06:55:00.685 npm ERR!     /home/app/packages/http/npm-debug.log
+06:55:00.685 
+06:55:00.685     at ChildProcess.exithandler (child_process.js:211:12)
+06:55:00.685     at emitTwo (events.js:106:13)
+06:55:00.685     at ChildProcess.emit (events.js:192:7)
+06:55:00.685     at maybeClose (internal/child_process.js:890:16)
+06:55:00.685     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:55:00.685 Attempting to retry publishing @viper/http...
+06:55:00.685 Error: Command failed: cd /home/app/packages/http && npm publish --tag latest
+06:55:00.685 npm info it worked if it ends with ok
+06:55:00.685 npm info using npm@4.1.2
+06:55:00.685 npm info using node@v7.6.0
+06:55:00.685 npm info lifecycle @viper/http@0.1.0-43~prepublish: @viper/http@0.1.0-43
+06:55:00.685 npm info lifecycle @viper/http@0.1.0-43~prepare: @viper/http@0.1.0-43
+06:55:00.685 npm info lifecycle @viper/http@0.1.0-43~prepublishOnly: @viper/http@0.1.0-43
+06:55:00.685 npm info attempt registry request try #1 at 6:53:50 AM
+06:55:00.685 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:55:00.685 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.685 npm info attempt registry request try #2 at 6:54:00 AM
+06:55:00.685 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:55:00.685 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.685 npm info attempt registry request try #3 at 6:55:00 AM
+06:55:00.685 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:55:00.686 npm ERR! publish Failed PUT undefined
+06:55:00.686 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:55:00.686 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:55:00.686 npm ERR! node v7.6.0
+06:55:00.686 npm ERR! npm  v4.1.2
+06:55:00.686 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:55:00.686 
+06:55:00.686 npm ERR! unable to verify the first certificate
+06:55:00.686 npm ERR! 
+06:55:00.686 npm ERR! If you need help, you may report this error at:
+06:55:00.686 npm ERR!     <https://github.com/npm/npm/issues>
+06:55:00.686 
+06:55:00.686 npm ERR! Please include the following file with any support request:
+06:55:00.686 npm ERR!     /home/app/packages/http/npm-debug.log
+06:55:00.686 
+06:55:00.686     at ChildProcess.exithandler (child_process.js:211:12)
+06:55:00.686     at emitTwo (events.js:106:13)
+06:55:00.686     at ChildProcess.emit (events.js:192:7)
+06:55:00.686     at maybeClose (internal/child_process.js:890:16)
+06:55:00.686     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:55:00.718 NpmUtilities.publishTaggedInDir("latest", "./packages/localization", )
+06:55:00.719 Error: Command failed: cd /home/app/packages/localization && npm publish --tag latest
+06:55:00.719 npm info it worked if it ends with ok
+06:55:00.719 npm info using npm@4.1.2
+06:55:00.719 npm info using node@v7.6.0
+06:55:00.719 npm info lifecycle @viper/localization@0.1.0-43~prepublish: @viper/localization@0.1.0-43
+06:55:00.719 npm info lifecycle @viper/localization@0.1.0-43~prepare: @viper/localization@0.1.0-43
+06:55:00.719 npm info lifecycle @viper/localization@0.1.0-43~prepublishOnly: @viper/localization@0.1.0-43
+06:55:00.719 npm info attempt registry request try #1 at 6:53:50 AM
+06:55:00.719 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:55:00.719 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.719 npm info attempt registry request try #2 at 6:54:00 AM
+06:55:00.719 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:55:00.719 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.719 npm info attempt registry request try #3 at 6:55:00 AM
+06:55:00.719 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:55:00.719 npm ERR! publish Failed PUT undefined
+06:55:00.719 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:55:00.719 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:55:00.719 npm ERR! node v7.6.0
+06:55:00.719 npm ERR! npm  v4.1.2
+06:55:00.719 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:55:00.719 
+06:55:00.719 npm ERR! unable to verify the first certificate
+06:55:00.719 npm ERR! 
+06:55:00.719 npm ERR! If you need help, you may report this error at:
+06:55:00.719 npm ERR!     <https://github.com/npm/npm/issues>
+06:55:00.719 
+06:55:00.720 npm ERR! Please include the following file with any support request:
+06:55:00.720 npm ERR!     /home/app/packages/localization/npm-debug.log
+06:55:00.720 
+06:55:00.720     at ChildProcess.exithandler (child_process.js:211:12)
+06:55:00.720     at emitTwo (events.js:106:13)
+06:55:00.720     at ChildProcess.emit (events.js:192:7)
+06:55:00.720     at maybeClose (internal/child_process.js:890:16)
+06:55:00.720     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:55:00.720 Attempting to retry publishing @viper/localization...
+06:55:00.720 Error: Command failed: cd /home/app/packages/localization && npm publish --tag latest
+06:55:00.720 npm info it worked if it ends with ok
+06:55:00.720 npm info using npm@4.1.2
+06:55:00.720 npm info using node@v7.6.0
+06:55:00.720 npm info lifecycle @viper/localization@0.1.0-43~prepublish: @viper/localization@0.1.0-43
+06:55:00.720 npm info lifecycle @viper/localization@0.1.0-43~prepare: @viper/localization@0.1.0-43
+06:55:00.720 npm info lifecycle @viper/localization@0.1.0-43~prepublishOnly: @viper/localization@0.1.0-43
+06:55:00.720 npm info attempt registry request try #1 at 6:53:50 AM
+06:55:00.720 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:55:00.720 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.720 npm info attempt registry request try #2 at 6:54:00 AM
+06:55:00.720 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:55:00.720 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.720 npm info attempt registry request try #3 at 6:55:00 AM
+06:55:00.720 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:55:00.720 npm ERR! publish Failed PUT undefined
+06:55:00.720 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:55:00.720 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:55:00.720 npm ERR! node v7.6.0
+06:55:00.720 npm ERR! npm  v4.1.2
+06:55:00.721 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:55:00.721 
+06:55:00.721 npm ERR! unable to verify the first certificate
+06:55:00.721 npm ERR! 
+06:55:00.721 npm ERR! If you need help, you may report this error at:
+06:55:00.721 npm ERR!     <https://github.com/npm/npm/issues>
+06:55:00.721 
+06:55:00.721 npm ERR! Please include the following file with any support request:
+06:55:00.721 npm ERR!     /home/app/packages/localization/npm-debug.log
+06:55:00.721 
+06:55:00.721     at ChildProcess.exithandler (child_process.js:211:12)
+06:55:00.721     at emitTwo (events.js:106:13)
+06:55:00.721     at ChildProcess.emit (events.js:192:7)
+06:55:00.721     at maybeClose (internal/child_process.js:890:16)
+06:55:00.721     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:55:00.728 NpmUtilities.publishTaggedInDir("latest", "./packages/forms", )
+06:55:00.728 Error: Command failed: cd /home/app/packages/forms && npm publish --tag latest
+06:55:00.728 npm info it worked if it ends with ok
+06:55:00.728 npm info using npm@4.1.2
+06:55:00.728 npm info using node@v7.6.0
+06:55:00.729 npm info lifecycle @viper/forms@0.1.0-43~prepublish: @viper/forms@0.1.0-43
+06:55:00.729 npm info lifecycle @viper/forms@0.1.0-43~prepare: @viper/forms@0.1.0-43
+06:55:00.729 npm info lifecycle @viper/forms@0.1.0-43~prepublishOnly: @viper/forms@0.1.0-43
+06:55:00.729 npm info attempt registry request try #1 at 6:53:50 AM
+06:55:00.729 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:55:00.729 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.729 npm info attempt registry request try #2 at 6:54:00 AM
+06:55:00.729 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:55:00.729 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.729 npm info attempt registry request try #3 at 6:55:00 AM
+06:55:00.729 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:55:00.729 npm ERR! publish Failed PUT undefined
+06:55:00.729 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:55:00.729 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:55:00.729 npm ERR! node v7.6.0
+06:55:00.729 npm ERR! npm  v4.1.2
+06:55:00.729 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:55:00.729 
+06:55:00.729 npm ERR! unable to verify the first certificate
+06:55:00.729 npm ERR! 
+06:55:00.729 npm ERR! If you need help, you may report this error at:
+06:55:00.729 npm ERR!     <https://github.com/npm/npm/issues>
+06:55:00.729 
+06:55:00.729 npm ERR! Please include the following file with any support request:
+06:55:00.729 npm ERR!     /home/app/packages/forms/npm-debug.log
+06:55:00.729 
+06:55:00.729     at ChildProcess.exithandler (child_process.js:211:12)
+06:55:00.729     at emitTwo (events.js:106:13)
+06:55:00.729     at ChildProcess.emit (events.js:192:7)
+06:55:00.729     at maybeClose (internal/child_process.js:890:16)
+06:55:00.729     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:55:00.730 Attempting to retry publishing @viper/forms...
+06:55:00.730 Error: Command failed: cd /home/app/packages/forms && npm publish --tag latest
+06:55:00.730 npm info it worked if it ends with ok
+06:55:00.730 npm info using npm@4.1.2
+06:55:00.730 npm info using node@v7.6.0
+06:55:00.730 npm info lifecycle @viper/forms@0.1.0-43~prepublish: @viper/forms@0.1.0-43
+06:55:00.730 npm info lifecycle @viper/forms@0.1.0-43~prepare: @viper/forms@0.1.0-43
+06:55:00.730 npm info lifecycle @viper/forms@0.1.0-43~prepublishOnly: @viper/forms@0.1.0-43
+06:55:00.730 npm info attempt registry request try #1 at 6:53:50 AM
+06:55:00.730 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:55:00.730 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.730 npm info attempt registry request try #2 at 6:54:00 AM
+06:55:00.730 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:55:00.730 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:55:00.730 npm info attempt registry request try #3 at 6:55:00 AM
+06:55:00.730 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:55:00.731 npm ERR! publish Failed PUT undefined
+06:55:00.731 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:55:00.731 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:55:00.731 npm ERR! node v7.6.0
+06:55:00.731 npm ERR! npm  v4.1.2
+06:55:00.731 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:55:00.731 
+06:55:00.731 npm ERR! unable to verify the first certificate
+06:55:00.731 npm ERR! 
+06:55:00.731 npm ERR! If you need help, you may report this error at:
+06:55:00.731 npm ERR!     <https://github.com/npm/npm/issues>
+06:55:00.731 
+06:55:00.731 npm ERR! Please include the following file with any support request:
+06:55:00.731 npm ERR!     /home/app/packages/forms/npm-debug.log
+06:55:00.731 
+06:55:00.731     at ChildProcess.exithandler (child_process.js:211:12)
+06:55:00.731     at emitTwo (events.js:106:13)
+06:55:00.731     at ChildProcess.emit (events.js:192:7)
+06:55:00.731     at maybeClose (internal/child_process.js:890:16)
+06:55:00.731     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:56:12.832 NpmUtilities.publishTaggedInDir("latest", "./packages/http", )
+06:56:12.832 Error: Command failed: cd /home/app/packages/http && npm publish --tag latest
+06:56:12.832 npm info it worked if it ends with ok
+06:56:12.832 npm info using npm@4.1.2
+06:56:12.832 npm info using node@v7.6.0
+06:56:12.832 npm info lifecycle @viper/http@0.1.0-43~prepublish: @viper/http@0.1.0-43
+06:56:12.832 npm info lifecycle @viper/http@0.1.0-43~prepare: @viper/http@0.1.0-43
+06:56:12.832 npm info lifecycle @viper/http@0.1.0-43~prepublishOnly: @viper/http@0.1.0-43
+06:56:12.832 npm info attempt registry request try #1 at 6:55:02 AM
+06:56:12.832 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:56:12.832 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.832 npm info attempt registry request try #2 at 6:55:12 AM
+06:56:12.832 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:56:12.832 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.832 npm info attempt registry request try #3 at 6:56:12 AM
+06:56:12.832 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:56:12.832 npm ERR! publish Failed PUT undefined
+06:56:12.832 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:56:12.832 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:56:12.832 npm ERR! node v7.6.0
+06:56:12.832 npm ERR! npm  v4.1.2
+06:56:12.832 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:56:12.832 
+06:56:12.832 npm ERR! unable to verify the first certificate
+06:56:12.832 npm ERR! 
+06:56:12.833 npm ERR! If you need help, you may report this error at:
+06:56:12.833 npm ERR!     <https://github.com/npm/npm/issues>
+06:56:12.833 
+06:56:12.833 npm ERR! Please include the following file with any support request:
+06:56:12.833 npm ERR!     /home/app/packages/http/npm-debug.log
+06:56:12.833 
+06:56:12.833     at ChildProcess.exithandler (child_process.js:211:12)
+06:56:12.833     at emitTwo (events.js:106:13)
+06:56:12.833     at ChildProcess.emit (events.js:192:7)
+06:56:12.833     at maybeClose (internal/child_process.js:890:16)
+06:56:12.833     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:56:12.833 Attempting to retry publishing @viper/http...
+06:56:12.833 Error: Command failed: cd /home/app/packages/http && npm publish --tag latest
+06:56:12.833 npm info it worked if it ends with ok
+06:56:12.833 npm info using npm@4.1.2
+06:56:12.833 npm info using node@v7.6.0
+06:56:12.833 npm info lifecycle @viper/http@0.1.0-43~prepublish: @viper/http@0.1.0-43
+06:56:12.833 npm info lifecycle @viper/http@0.1.0-43~prepare: @viper/http@0.1.0-43
+06:56:12.833 npm info lifecycle @viper/http@0.1.0-43~prepublishOnly: @viper/http@0.1.0-43
+06:56:12.833 npm info attempt registry request try #1 at 6:55:02 AM
+06:56:12.833 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:56:12.833 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.833 npm info attempt registry request try #2 at 6:55:12 AM
+06:56:12.833 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:56:12.833 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.833 npm info attempt registry request try #3 at 6:56:12 AM
+06:56:12.833 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:56:12.833 npm ERR! publish Failed PUT undefined
+06:56:12.833 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:56:12.833 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:56:12.833 npm ERR! node v7.6.0
+06:56:12.834 npm ERR! npm  v4.1.2
+06:56:12.834 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:56:12.834 
+06:56:12.834 npm ERR! unable to verify the first certificate
+06:56:12.834 npm ERR! 
+06:56:12.834 npm ERR! If you need help, you may report this error at:
+06:56:12.834 npm ERR!     <https://github.com/npm/npm/issues>
+06:56:12.834 
+06:56:12.834 npm ERR! Please include the following file with any support request:
+06:56:12.834 npm ERR!     /home/app/packages/http/npm-debug.log
+06:56:12.834 
+06:56:12.834     at ChildProcess.exithandler (child_process.js:211:12)
+06:56:12.834     at emitTwo (events.js:106:13)
+06:56:12.834     at ChildProcess.emit (events.js:192:7)
+06:56:12.834     at maybeClose (internal/child_process.js:890:16)
+06:56:12.834     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:56:12.886 NpmUtilities.publishTaggedInDir("latest", "./packages/localization", )
+06:56:12.887 Error: Command failed: cd /home/app/packages/localization && npm publish --tag latest
+06:56:12.887 npm info it worked if it ends with ok
+06:56:12.887 npm info using npm@4.1.2
+06:56:12.887 npm info using node@v7.6.0
+06:56:12.887 npm info lifecycle @viper/localization@0.1.0-43~prepublish: @viper/localization@0.1.0-43
+06:56:12.887 npm info lifecycle @viper/localization@0.1.0-43~prepare: @viper/localization@0.1.0-43
+06:56:12.887 npm info lifecycle @viper/localization@0.1.0-43~prepublishOnly: @viper/localization@0.1.0-43
+06:56:12.887 npm info attempt registry request try #1 at 6:55:02 AM
+06:56:12.887 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:56:12.887 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.887 npm info attempt registry request try #2 at 6:55:12 AM
+06:56:12.887 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:56:12.887 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.887 npm info attempt registry request try #3 at 6:56:12 AM
+06:56:12.887 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:56:12.887 npm ERR! publish Failed PUT undefined
+06:56:12.887 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:56:12.887 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:56:12.887 npm ERR! node v7.6.0
+06:56:12.887 npm ERR! npm  v4.1.2
+06:56:12.887 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:56:12.887 
+06:56:12.887 npm ERR! unable to verify the first certificate
+06:56:12.887 npm ERR! 
+06:56:12.887 npm ERR! If you need help, you may report this error at:
+06:56:12.887 npm ERR!     <https://github.com/npm/npm/issues>
+06:56:12.887 
+06:56:12.887 npm ERR! Please include the following file with any support request:
+06:56:12.887 npm ERR!     /home/app/packages/localization/npm-debug.log
+06:56:12.888 
+06:56:12.888     at ChildProcess.exithandler (child_process.js:211:12)
+06:56:12.888     at emitTwo (events.js:106:13)
+06:56:12.888     at ChildProcess.emit (events.js:192:7)
+06:56:12.888     at maybeClose (internal/child_process.js:890:16)
+06:56:12.888     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:56:12.888 Attempting to retry publishing @viper/localization...
+06:56:12.888 Error: Command failed: cd /home/app/packages/localization && npm publish --tag latest
+06:56:12.888 npm info it worked if it ends with ok
+06:56:12.888 npm info using npm@4.1.2
+06:56:12.889 npm info using node@v7.6.0
+06:56:12.889 npm info lifecycle @viper/localization@0.1.0-43~prepublish: @viper/localization@0.1.0-43
+06:56:12.889 npm info lifecycle @viper/localization@0.1.0-43~prepare: @viper/localization@0.1.0-43
+06:56:12.889 npm info lifecycle @viper/localization@0.1.0-43~prepublishOnly: @viper/localization@0.1.0-43
+06:56:12.889 npm info attempt registry request try #1 at 6:55:02 AM
+06:56:12.889 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:56:12.889 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.889 npm info attempt registry request try #2 at 6:55:12 AM
+06:56:12.889 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:56:12.889 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.889 npm info attempt registry request try #3 at 6:56:12 AM
+06:56:12.889 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:56:12.889 npm ERR! publish Failed PUT undefined
+06:56:12.889 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:56:12.889 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:56:12.889 npm ERR! node v7.6.0
+06:56:12.889 npm ERR! npm  v4.1.2
+06:56:12.889 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:56:12.889 
+06:56:12.889 npm ERR! unable to verify the first certificate
+06:56:12.889 npm ERR! 
+06:56:12.889 npm ERR! If you need help, you may report this error at:
+06:56:12.889 npm ERR!     <https://github.com/npm/npm/issues>
+06:56:12.889 
+06:56:12.889 npm ERR! Please include the following file with any support request:
+06:56:12.889 npm ERR!     /home/app/packages/localization/npm-debug.log
+06:56:12.889 
+06:56:12.889     at ChildProcess.exithandler (child_process.js:211:12)
+06:56:12.889     at emitTwo (events.js:106:13)
+06:56:12.889     at ChildProcess.emit (events.js:192:7)
+06:56:12.890     at maybeClose (internal/child_process.js:890:16)
+06:56:12.890     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:56:12.988 NpmUtilities.publishTaggedInDir("latest", "./packages/forms", )
+06:56:12.988 Error: Command failed: cd /home/app/packages/forms && npm publish --tag latest
+06:56:12.988 npm info it worked if it ends with ok
+06:56:12.988 npm info using npm@4.1.2
+06:56:12.988 npm info using node@v7.6.0
+06:56:12.988 npm info lifecycle @viper/forms@0.1.0-43~prepublish: @viper/forms@0.1.0-43
+06:56:12.988 npm info lifecycle @viper/forms@0.1.0-43~prepare: @viper/forms@0.1.0-43
+06:56:12.988 npm info lifecycle @viper/forms@0.1.0-43~prepublishOnly: @viper/forms@0.1.0-43
+06:56:12.988 npm info attempt registry request try #1 at 6:55:02 AM
+06:56:12.988 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:56:12.989 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.989 npm info attempt registry request try #2 at 6:55:12 AM
+06:56:12.989 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:56:12.989 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.989 npm info attempt registry request try #3 at 6:56:12 AM
+06:56:12.989 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:56:12.989 npm ERR! publish Failed PUT undefined
+06:56:12.989 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:56:12.989 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:56:12.989 npm ERR! node v7.6.0
+06:56:12.989 npm ERR! npm  v4.1.2
+06:56:12.989 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:56:12.989 
+06:56:12.989 npm ERR! unable to verify the first certificate
+06:56:12.989 npm ERR! 
+06:56:12.989 npm ERR! If you need help, you may report this error at:
+06:56:12.989 npm ERR!     <https://github.com/npm/npm/issues>
+06:56:12.989 
+06:56:12.989 npm ERR! Please include the following file with any support request:
+06:56:12.989 npm ERR!     /home/app/packages/forms/npm-debug.log
+06:56:12.989 
+06:56:12.989     at ChildProcess.exithandler (child_process.js:211:12)
+06:56:12.989     at emitTwo (events.js:106:13)
+06:56:12.989     at ChildProcess.emit (events.js:192:7)
+06:56:12.989     at maybeClose (internal/child_process.js:890:16)
+06:56:12.989     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:56:12.993 Attempting to retry publishing @viper/forms...
+06:56:12.993 Error: Command failed: cd /home/app/packages/forms && npm publish --tag latest
+06:56:12.993 npm info it worked if it ends with ok
+06:56:12.993 npm info using npm@4.1.2
+06:56:12.993 npm info using node@v7.6.0
+06:56:12.993 npm info lifecycle @viper/forms@0.1.0-43~prepublish: @viper/forms@0.1.0-43
+06:56:12.993 npm info lifecycle @viper/forms@0.1.0-43~prepare: @viper/forms@0.1.0-43
+06:56:12.993 npm info lifecycle @viper/forms@0.1.0-43~prepublishOnly: @viper/forms@0.1.0-43
+06:56:12.993 npm info attempt registry request try #1 at 6:55:02 AM
+06:56:12.993 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:56:12.993 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.993 npm info attempt registry request try #2 at 6:55:12 AM
+06:56:12.993 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:56:12.993 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:56:12.993 npm info attempt registry request try #3 at 6:56:12 AM
+06:56:12.993 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:56:12.993 npm ERR! publish Failed PUT undefined
+06:56:12.993 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:56:12.993 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:56:12.993 npm ERR! node v7.6.0
+06:56:12.994 npm ERR! npm  v4.1.2
+06:56:12.994 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:56:12.994 
+06:56:12.994 npm ERR! unable to verify the first certificate
+06:56:12.994 npm ERR! 
+06:56:12.994 npm ERR! If you need help, you may report this error at:
+06:56:12.994 npm ERR!     <https://github.com/npm/npm/issues>
+06:56:12.994 
+06:56:12.994 npm ERR! Please include the following file with any support request:
+06:56:12.994 npm ERR!     /home/app/packages/forms/npm-debug.log
+06:56:12.994 
+06:56:12.994     at ChildProcess.exithandler (child_process.js:211:12)
+06:56:12.994     at emitTwo (events.js:106:13)
+06:56:12.994     at ChildProcess.emit (events.js:192:7)
+06:56:12.994     at maybeClose (internal/child_process.js:890:16)
+06:56:12.994     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:57:24.945 NpmUtilities.publishTaggedInDir("latest", "./packages/http", )
+06:57:24.945 Error: Command failed: cd /home/app/packages/http && npm publish --tag latest
+06:57:24.945 npm info it worked if it ends with ok
+06:57:24.945 npm info using npm@4.1.2
+06:57:24.945 npm info using node@v7.6.0
+06:57:24.945 npm info lifecycle @viper/http@0.1.0-43~prepublish: @viper/http@0.1.0-43
+06:57:24.945 npm info lifecycle @viper/http@0.1.0-43~prepare: @viper/http@0.1.0-43
+06:57:24.945 npm info lifecycle @viper/http@0.1.0-43~prepublishOnly: @viper/http@0.1.0-43
+06:57:24.945 npm info attempt registry request try #1 at 6:56:14 AM
+06:57:24.945 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:57:24.945 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:24.945 npm info attempt registry request try #2 at 6:56:24 AM
+06:57:24.945 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:57:24.945 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:24.945 npm info attempt registry request try #3 at 6:57:24 AM
+06:57:24.945 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:57:24.945 npm ERR! publish Failed PUT undefined
+06:57:24.945 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:57:24.945 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:57:24.945 npm ERR! node v7.6.0
+06:57:24.945 npm ERR! npm  v4.1.2
+06:57:24.945 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:57:24.945 
+06:57:24.946 npm ERR! unable to verify the first certificate
+06:57:24.946 npm ERR! 
+06:57:24.946 npm ERR! If you need help, you may report this error at:
+06:57:24.946 npm ERR!     <https://github.com/npm/npm/issues>
+06:57:24.946 
+06:57:24.946 npm ERR! Please include the following file with any support request:
+06:57:24.946 npm ERR!     /home/app/packages/http/npm-debug.log
+06:57:24.946 
+06:57:24.946     at ChildProcess.exithandler (child_process.js:211:12)
+06:57:24.946     at emitTwo (events.js:106:13)
+06:57:24.946     at ChildProcess.emit (events.js:192:7)
+06:57:24.946     at maybeClose (internal/child_process.js:890:16)
+06:57:24.946     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:57:24.946 Attempting to retry publishing @viper/http...
+06:57:24.946 Error: Command failed: cd /home/app/packages/http && npm publish --tag latest
+06:57:24.946 npm info it worked if it ends with ok
+06:57:24.946 npm info using npm@4.1.2
+06:57:24.946 npm info using node@v7.6.0
+06:57:24.946 npm info lifecycle @viper/http@0.1.0-43~prepublish: @viper/http@0.1.0-43
+06:57:24.946 npm info lifecycle @viper/http@0.1.0-43~prepare: @viper/http@0.1.0-43
+06:57:24.946 npm info lifecycle @viper/http@0.1.0-43~prepublishOnly: @viper/http@0.1.0-43
+06:57:24.946 npm info attempt registry request try #1 at 6:56:14 AM
+06:57:24.946 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:57:24.946 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:24.946 npm info attempt registry request try #2 at 6:56:24 AM
+06:57:24.946 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:57:24.946 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:24.946 npm info attempt registry request try #3 at 6:57:24 AM
+06:57:24.946 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:57:24.947 npm ERR! publish Failed PUT undefined
+06:57:24.947 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:57:24.947 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:57:24.947 npm ERR! node v7.6.0
+06:57:24.947 npm ERR! npm  v4.1.2
+06:57:24.947 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:57:24.947 
+06:57:24.947 npm ERR! unable to verify the first certificate
+06:57:24.947 npm ERR! 
+06:57:24.947 npm ERR! If you need help, you may report this error at:
+06:57:24.947 npm ERR!     <https://github.com/npm/npm/issues>
+06:57:24.947 
+06:57:24.947 npm ERR! Please include the following file with any support request:
+06:57:24.947 npm ERR!     /home/app/packages/http/npm-debug.log
+06:57:24.947 
+06:57:24.947     at ChildProcess.exithandler (child_process.js:211:12)
+06:57:24.947     at emitTwo (events.js:106:13)
+06:57:24.947     at ChildProcess.emit (events.js:192:7)
+06:57:24.947     at maybeClose (internal/child_process.js:890:16)
+06:57:24.947     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:57:25.058 NpmUtilities.publishTaggedInDir("latest", "./packages/localization", )
+06:57:25.058 Error: Command failed: cd /home/app/packages/localization && npm publish --tag latest
+06:57:25.059 npm info it worked if it ends with ok
+06:57:25.059 npm info using npm@4.1.2
+06:57:25.059 npm info using node@v7.6.0
+06:57:25.059 npm info lifecycle @viper/localization@0.1.0-43~prepublish: @viper/localization@0.1.0-43
+06:57:25.059 npm info lifecycle @viper/localization@0.1.0-43~prepare: @viper/localization@0.1.0-43
+06:57:25.059 npm info lifecycle @viper/localization@0.1.0-43~prepublishOnly: @viper/localization@0.1.0-43
+06:57:25.059 npm info attempt registry request try #1 at 6:56:14 AM
+06:57:25.059 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:57:25.059 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:25.059 npm info attempt registry request try #2 at 6:56:24 AM
+06:57:25.059 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:57:25.059 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:25.059 npm info attempt registry request try #3 at 6:57:24 AM
+06:57:25.059 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:57:25.059 npm ERR! publish Failed PUT undefined
+06:57:25.059 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:57:25.059 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:57:25.059 npm ERR! node v7.6.0
+06:57:25.059 npm ERR! npm  v4.1.2
+06:57:25.059 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:57:25.059 
+06:57:25.059 npm ERR! unable to verify the first certificate
+06:57:25.059 npm ERR! 
+06:57:25.059 npm ERR! If you need help, you may report this error at:
+06:57:25.059 npm ERR!     <https://github.com/npm/npm/issues>
+06:57:25.059 
+06:57:25.059 npm ERR! Please include the following file with any support request:
+06:57:25.059 npm ERR!     /home/app/packages/localization/npm-debug.log
+06:57:25.060 
+06:57:25.060     at ChildProcess.exithandler (child_process.js:211:12)
+06:57:25.060     at emitTwo (events.js:106:13)
+06:57:25.060     at ChildProcess.emit (events.js:192:7)
+06:57:25.060     at maybeClose (internal/child_process.js:890:16)
+06:57:25.060     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:57:25.060 Attempting to retry publishing @viper/localization...
+06:57:25.060 Error: Command failed: cd /home/app/packages/localization && npm publish --tag latest
+06:57:25.060 npm info it worked if it ends with ok
+06:57:25.060 npm info using npm@4.1.2
+06:57:25.060 npm info using node@v7.6.0
+06:57:25.060 npm info lifecycle @viper/localization@0.1.0-43~prepublish: @viper/localization@0.1.0-43
+06:57:25.060 npm info lifecycle @viper/localization@0.1.0-43~prepare: @viper/localization@0.1.0-43
+06:57:25.060 npm info lifecycle @viper/localization@0.1.0-43~prepublishOnly: @viper/localization@0.1.0-43
+06:57:25.060 npm info attempt registry request try #1 at 6:56:14 AM
+06:57:25.060 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:57:25.060 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:25.060 npm info attempt registry request try #2 at 6:56:24 AM
+06:57:25.060 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:57:25.060 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:25.060 npm info attempt registry request try #3 at 6:57:24 AM
+06:57:25.060 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:57:25.060 npm ERR! publish Failed PUT undefined
+06:57:25.060 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:57:25.060 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:57:25.060 npm ERR! node v7.6.0
+06:57:25.060 npm ERR! npm  v4.1.2
+06:57:25.060 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:57:25.060 
+06:57:25.061 npm ERR! unable to verify the first certificate
+06:57:25.061 npm ERR! 
+06:57:25.061 npm ERR! If you need help, you may report this error at:
+06:57:25.061 npm ERR!     <https://github.com/npm/npm/issues>
+06:57:25.061 
+06:57:25.061 npm ERR! Please include the following file with any support request:
+06:57:25.061 npm ERR!     /home/app/packages/localization/npm-debug.log
+06:57:25.061 
+06:57:25.061     at ChildProcess.exithandler (child_process.js:211:12)
+06:57:25.061     at emitTwo (events.js:106:13)
+06:57:25.061     at ChildProcess.emit (events.js:192:7)
+06:57:25.061     at maybeClose (internal/child_process.js:890:16)
+06:57:25.061     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:57:25.129 NpmUtilities.publishTaggedInDir("latest", "./packages/forms", )
+06:57:25.129 Error: Command failed: cd /home/app/packages/forms && npm publish --tag latest
+06:57:25.129 npm info it worked if it ends with ok
+06:57:25.129 npm info using npm@4.1.2
+06:57:25.129 npm info using node@v7.6.0
+06:57:25.129 npm info lifecycle @viper/forms@0.1.0-43~prepublish: @viper/forms@0.1.0-43
+06:57:25.129 npm info lifecycle @viper/forms@0.1.0-43~prepare: @viper/forms@0.1.0-43
+06:57:25.129 npm info lifecycle @viper/forms@0.1.0-43~prepublishOnly: @viper/forms@0.1.0-43
+06:57:25.130 npm info attempt registry request try #1 at 6:56:14 AM
+06:57:25.130 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:57:25.130 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:25.130 npm info attempt registry request try #2 at 6:56:24 AM
+06:57:25.130 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:57:25.130 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:25.130 npm info attempt registry request try #3 at 6:57:25 AM
+06:57:25.130 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:57:25.130 npm ERR! publish Failed PUT undefined
+06:57:25.130 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:57:25.130 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:57:25.130 npm ERR! node v7.6.0
+06:57:25.130 npm ERR! npm  v4.1.2
+06:57:25.130 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:57:25.130 
+06:57:25.130 npm ERR! unable to verify the first certificate
+06:57:25.130 npm ERR! 
+06:57:25.130 npm ERR! If you need help, you may report this error at:
+06:57:25.130 npm ERR!     <https://github.com/npm/npm/issues>
+06:57:25.130 
+06:57:25.130 npm ERR! Please include the following file with any support request:
+06:57:25.130 npm ERR!     /home/app/packages/forms/npm-debug.log
+06:57:25.130 
+06:57:25.130     at ChildProcess.exithandler (child_process.js:211:12)
+06:57:25.130     at emitTwo (events.js:106:13)
+06:57:25.130     at ChildProcess.emit (events.js:192:7)
+06:57:25.130     at maybeClose (internal/child_process.js:890:16)
+06:57:25.130     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:57:25.130 Attempting to retry publishing @viper/forms...
+06:57:25.131 Error: Command failed: cd /home/app/packages/forms && npm publish --tag latest
+06:57:25.131 npm info it worked if it ends with ok
+06:57:25.131 npm info using npm@4.1.2
+06:57:25.131 npm info using node@v7.6.0
+06:57:25.131 npm info lifecycle @viper/forms@0.1.0-43~prepublish: @viper/forms@0.1.0-43
+06:57:25.131 npm info lifecycle @viper/forms@0.1.0-43~prepare: @viper/forms@0.1.0-43
+06:57:25.131 npm info lifecycle @viper/forms@0.1.0-43~prepublishOnly: @viper/forms@0.1.0-43
+06:57:25.131 npm info attempt registry request try #1 at 6:56:14 AM
+06:57:25.131 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:57:25.131 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:25.131 npm info attempt registry request try #2 at 6:56:24 AM
+06:57:25.131 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:57:25.131 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:57:25.136 npm info attempt registry request try #3 at 6:57:25 AM
+06:57:25.136 npm http request PUT https://***.net/repository/npm-***/@viper%2fforms
+06:57:25.136 npm ERR! publish Failed PUT undefined
+06:57:25.136 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:57:25.136 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:57:25.137 npm ERR! node v7.6.0
+06:57:25.137 npm ERR! npm  v4.1.2
+06:57:25.137 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:57:25.137 
+06:57:25.137 npm ERR! unable to verify the first certificate
+06:57:25.137 npm ERR! 
+06:57:25.137 npm ERR! If you need help, you may report this error at:
+06:57:25.137 npm ERR!     <https://github.com/npm/npm/issues>
+06:57:25.137 
+06:57:25.137 npm ERR! Please include the following file with any support request:
+06:57:25.137 npm ERR!     /home/app/packages/forms/npm-debug.log
+06:57:25.137 
+06:57:25.137     at ChildProcess.exithandler (child_process.js:211:12)
+06:57:25.137     at emitTwo (events.js:106:13)
+06:57:25.137     at ChildProcess.emit (events.js:192:7)
+06:57:25.137     at maybeClose (internal/child_process.js:890:16)
+06:57:25.137     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:58:36.986 NpmUtilities.publishTaggedInDir("latest", "./packages/http", )
+06:58:36.987 Error: Command failed: cd /home/app/packages/http && npm publish --tag latest
+06:58:36.987 npm info it worked if it ends with ok
+06:58:36.987 npm info using npm@4.1.2
+06:58:36.987 npm info using node@v7.6.0
+06:58:36.987 npm info lifecycle @viper/http@0.1.0-43~prepublish: @viper/http@0.1.0-43
+06:58:36.987 npm info lifecycle @viper/http@0.1.0-43~prepare: @viper/http@0.1.0-43
+06:58:36.987 npm info lifecycle @viper/http@0.1.0-43~prepublishOnly: @viper/http@0.1.0-43
+06:58:36.987 npm info attempt registry request try #1 at 6:57:26 AM
+06:58:36.987 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:58:36.987 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:58:36.987 npm info attempt registry request try #2 at 6:57:36 AM
+06:58:36.987 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:58:36.987 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:58:36.987 npm info attempt registry request try #3 at 6:58:36 AM
+06:58:36.987 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:58:36.987 npm ERR! publish Failed PUT undefined
+06:58:36.987 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:58:36.987 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:58:36.987 npm ERR! node v7.6.0
+06:58:36.987 npm ERR! npm  v4.1.2
+06:58:36.987 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:58:36.987 
+06:58:36.987 npm ERR! unable to verify the first certificate
+06:58:36.987 npm ERR! 
+06:58:36.987 npm ERR! If you need help, you may report this error at:
+06:58:36.987 npm ERR!     <https://github.com/npm/npm/issues>
+06:58:36.987 
+06:58:36.987 npm ERR! Please include the following file with any support request:
+06:58:36.987 npm ERR!     /home/app/packages/http/npm-debug.log
+06:58:36.988 
+06:58:36.988     at ChildProcess.exithandler (child_process.js:211:12)
+06:58:36.992     at emitTwo (events.js:106:13)
+06:58:36.992     at ChildProcess.emit (events.js:192:7)
+06:58:36.992     at maybeClose (internal/child_process.js:890:16)
+06:58:36.992     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:58:36.992 Ran out of retries while publishing @viper/http
+06:58:36.992 Error: Command failed: cd /home/app/packages/http && npm publish --tag latest
+06:58:36.992 npm info it worked if it ends with ok
+06:58:36.992 npm info using npm@4.1.2
+06:58:36.992 npm info using node@v7.6.0
+06:58:36.992 npm info lifecycle @viper/http@0.1.0-43~prepublish: @viper/http@0.1.0-43
+06:58:36.992 npm info lifecycle @viper/http@0.1.0-43~prepare: @viper/http@0.1.0-43
+06:58:36.992 npm info lifecycle @viper/http@0.1.0-43~prepublishOnly: @viper/http@0.1.0-43
+06:58:36.992 npm info attempt registry request try #1 at 6:57:26 AM
+06:58:36.992 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:58:36.992 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:58:36.992 npm info attempt registry request try #2 at 6:57:36 AM
+06:58:36.992 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:58:36.993 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:58:36.993 npm info attempt registry request try #3 at 6:58:36 AM
+06:58:36.993 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:58:36.993 npm ERR! publish Failed PUT undefined
+06:58:36.993 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:58:36.993 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:58:36.993 npm ERR! node v7.6.0
+06:58:36.993 npm ERR! npm  v4.1.2
+06:58:36.993 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:58:36.993 
+06:58:36.993 npm ERR! unable to verify the first certificate
+06:58:36.993 npm ERR! 
+06:58:36.993 npm ERR! If you need help, you may report this error at:
+06:58:36.993 npm ERR!     <https://github.com/npm/npm/issues>
+06:58:36.993 
+06:58:36.993 npm ERR! Please include the following file with any support request:
+06:58:36.993 npm ERR!     /home/app/packages/http/npm-debug.log
+06:58:36.993 
+06:58:36.993     at ChildProcess.exithandler (child_process.js:211:12)
+06:58:36.993     at emitTwo (events.js:106:13)
+06:58:36.993     at ChildProcess.emit (events.js:192:7)
+06:58:36.993     at maybeClose (internal/child_process.js:890:16)
+06:58:36.993     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:58:36.995 Errored while running PublishCommand.execute
+06:58:36.995 Error: Command failed: cd /home/app/packages/http && npm publish --tag latest
+06:58:36.995 npm info it worked if it ends with ok
+06:58:36.995 npm info using npm@4.1.2
+06:58:36.995 npm info using node@v7.6.0
+06:58:36.995 npm info lifecycle @viper/http@0.1.0-43~prepublish: @viper/http@0.1.0-43
+06:58:36.995 npm info lifecycle @viper/http@0.1.0-43~prepare: @viper/http@0.1.0-43
+06:58:36.995 npm info lifecycle @viper/http@0.1.0-43~prepublishOnly: @viper/http@0.1.0-43
+06:58:36.995 npm info attempt registry request try #1 at 6:57:26 AM
+06:58:36.995 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:58:36.995 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:58:36.995 npm info attempt registry request try #2 at 6:57:36 AM
+06:58:36.995 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:58:36.995 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:58:36.995 npm info attempt registry request try #3 at 6:58:36 AM
+06:58:36.995 npm http request PUT https://***.net/repository/npm-***/@viper%2fhttp
+06:58:36.995 npm ERR! publish Failed PUT undefined
+06:58:36.995 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:58:36.995 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:58:36.995 npm ERR! node v7.6.0
+06:58:36.995 npm ERR! npm  v4.1.2
+06:58:36.995 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:58:36.995 
+06:58:36.995 npm ERR! unable to verify the first certificate
+06:58:36.995 npm ERR! 
+06:58:36.996 npm ERR! If you need help, you may report this error at:
+06:58:36.996 npm ERR!     <https://github.com/npm/npm/issues>
+06:58:36.996 
+06:58:36.996 npm ERR! Please include the following file with any support request:
+06:58:36.996 npm ERR!     /home/app/packages/http/npm-debug.log
+06:58:36.996 
+06:58:36.996     at ChildProcess.exithandler (child_process.js:211:12)
+06:58:36.996     at emitTwo (events.js:106:13)
+06:58:36.996     at ChildProcess.emit (events.js:192:7)
+06:58:36.996     at maybeClose (internal/child_process.js:890:16)
+06:58:36.996     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:58:37.015 Waiting for 2 child processes to exit. CTRL-C to exit immediately.
+06:58:37.155 NpmUtilities.publishTaggedInDir("latest", "./packages/localization", )
+06:58:37.155 Error: Command failed: cd /home/app/packages/localization && npm publish --tag latest
+06:58:37.155 npm info it worked if it ends with ok
+06:58:37.155 npm info using npm@4.1.2
+06:58:37.155 npm info using node@v7.6.0
+06:58:37.155 npm info lifecycle @viper/localization@0.1.0-43~prepublish: @viper/localization@0.1.0-43
+06:58:37.155 npm info lifecycle @viper/localization@0.1.0-43~prepare: @viper/localization@0.1.0-43
+06:58:37.156 npm info lifecycle @viper/localization@0.1.0-43~prepublishOnly: @viper/localization@0.1.0-43
+06:58:37.156 npm info attempt registry request try #1 at 6:57:26 AM
+06:58:37.156 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:58:37.156 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:58:37.156 npm info attempt registry request try #2 at 6:57:36 AM
+06:58:37.156 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:58:37.156 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:58:37.156 npm info attempt registry request try #3 at 6:58:37 AM
+06:58:37.156 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:58:37.156 npm ERR! publish Failed PUT undefined
+06:58:37.156 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:58:37.156 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:58:37.156 npm ERR! node v7.6.0
+06:58:37.156 npm ERR! npm  v4.1.2
+06:58:37.156 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:58:37.156 
+06:58:37.156 npm ERR! unable to verify the first certificate
+06:58:37.156 npm ERR! 
+06:58:37.156 npm ERR! If you need help, you may report this error at:
+06:58:37.156 npm ERR!     <https://github.com/npm/npm/issues>
+06:58:37.156 
+06:58:37.156 npm ERR! Please include the following file with any support request:
+06:58:37.156 npm ERR!     /home/app/packages/localization/npm-debug.log
+06:58:37.156 
+06:58:37.156     at ChildProcess.exithandler (child_process.js:211:12)
+06:58:37.156     at emitTwo (events.js:106:13)
+06:58:37.156     at ChildProcess.emit (events.js:192:7)
+06:58:37.156     at maybeClose (internal/child_process.js:890:16)
+06:58:37.156     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:58:37.156 Ran out of retries while publishing @viper/localization
+06:58:37.157 Error: Command failed: cd /home/app/packages/localization && npm publish --tag latest
+06:58:37.157 npm info it worked if it ends with ok
+06:58:37.157 npm info using npm@4.1.2
+06:58:37.157 npm info using node@v7.6.0
+06:58:37.157 npm info lifecycle @viper/localization@0.1.0-43~prepublish: @viper/localization@0.1.0-43
+06:58:37.157 npm info lifecycle @viper/localization@0.1.0-43~prepare: @viper/localization@0.1.0-43
+06:58:37.157 npm info lifecycle @viper/localization@0.1.0-43~prepublishOnly: @viper/localization@0.1.0-43
+06:58:37.157 npm info attempt registry request try #1 at 6:57:26 AM
+06:58:37.157 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:58:37.157 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:58:37.157 npm info attempt registry request try #2 at 6:57:36 AM
+06:58:37.157 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:58:37.157 npm info retry will retry, error on last attempt: Error: unable to verify the first certificate
+06:58:37.157 npm info attempt registry request try #3 at 6:58:37 AM
+06:58:37.157 npm http request PUT https://***.net/repository/npm-***/@viper%2flocalization
+06:58:37.157 npm ERR! publish Failed PUT undefined
+06:58:37.157 npm ERR! Linux 4.4.19-29.55.amzn1.x86_64
+06:58:37.157 npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+06:58:37.157 npm ERR! node v7.6.0
+06:58:37.157 npm ERR! npm  v4.1.2
+06:58:37.157 npm ERR! code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+06:58:37.157 
+06:58:37.157 npm ERR! unable to verify the first certificate
+06:58:37.157 npm ERR! 
+06:58:37.157 npm ERR! If you need help, you may report this error at:
+06:58:37.157 npm ERR!     <https://github.com/npm/npm/issues>
+06:58:37.158 
+06:58:37.158 npm ERR! Please include the following file with any support request:
+06:58:37.158 npm ERR!     /home/app/packages/localization/npm-debug.log
+06:58:37.158 
+06:58:37.158     at ChildProcess.exithandler (child_process.js:211:12)
+06:58:37.158     at emitTwo (events.js:106:13)
+06:58:37.158     at ChildProcess.emit (events.js:192:7)
+06:58:37.158     at maybeClose (internal/child_process.js:890:16)
+06:58:37.158     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+06:58:37.212 error Command failed with exit code 1.
+06:58:37.213 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+06:58:37.703 [go] Current job status: failed.
+
+06:58:37.726 [go] Start to create properties viper-shared-js/0.1.0-43/publish/1/js-publish on ip-*** [/var/lib/go-agent]
+06:58:37.726 [go] Start to upload viper-shared-js/0.1.0-43/publish/1/js-publish on ip-*** [/var/lib/go-agent]
+06:58:37.727 [go] Uploading artifacts from /var/lib/go-agent/pipelines/viper-shared-js/.npmrc to [defaultRoot]
+06:58:37.845 [go] Job completed viper-shared-js/0.1.0-43/publish/1/js-publish on ip-*** [/var/lib/go-agent]
